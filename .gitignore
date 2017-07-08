@@ -1,3 +1,4 @@
 /src/node_modules
 /src/package-lock.json
-/src/public
+/src/public/assets/*
+/src/public/index.html
