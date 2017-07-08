@@ -1,6 +1,10 @@
 & {
-    .input-box {
-      width: 100%;
+    .textarea {
+      max-height: none;
       height: 100%;
+    }
+
+    .input-box{
+      width: 100%;
     }
 }
