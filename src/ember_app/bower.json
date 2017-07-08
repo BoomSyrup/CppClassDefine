@@ -1,0 +1,6 @@
+{
+  "name": "ember-app",
+  "dependencies": {
+    "highlightjs": "^9.12.0"
+  }
+}

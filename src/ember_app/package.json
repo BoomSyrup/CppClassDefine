@@ -32,6 +32,7 @@
     "ember-cli-shims": "^1.1.0",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-uglify": "^1.2.0",
+    "ember-code-highlight": "^1.0.0",
     "ember-component-css": "^0.3.4",
     "ember-data": "^2.13.0",
     "ember-export-application-global": "^2.0.0",
@@ -48,6 +49,7 @@
   },
   "private": true,
   "dependencies": {
-    "bulma": "^0.4.3"
+    "bulma": "^0.4.3",
+    "ember-code-highlight": "^1.0.0"
   }
 }
