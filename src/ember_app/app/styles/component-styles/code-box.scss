@@ -1,6 +1,8 @@
 & {
-    .input-box {
+    .textarea {
+      max-height: none;
       width: 100%;
-      height: 100%;
+      height: 82vh;
+      resize: none;
     }
 }
