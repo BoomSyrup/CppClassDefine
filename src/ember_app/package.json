@@ -32,8 +32,10 @@
     "ember-cli-shims": "^1.1.0",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-uglify": "^1.2.0",
+    "ember-component-css": "^0.3.4",
     "ember-data": "^2.13.0",
     "ember-export-application-global": "^2.0.0",
+    "ember-font-awesome": "^3.0.5",
     "ember-load-initializers": "^1.0.0",
     "ember-resolver": "^4.0.0",
     "ember-source": "~2.13.0",
@@ -42,7 +44,7 @@
     "loader.js": "^4.2.3"
   },
   "engines": {
-    "node": ">= 4"
+    "node": ">= 7.6.0"
   },
   "private": true,
   "dependencies": {

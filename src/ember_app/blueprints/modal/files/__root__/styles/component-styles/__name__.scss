@@ -1,0 +1,16 @@
+& {
+    // keep everything in here!
+    .bottom {
+        margin-top: 16px;
+        .control {
+            margin-left: auto;
+            margin-right: auto;
+            width: 132px;
+            height: 31px;
+            
+            .button {
+                width: 100%;
+            }
+        }
+    }
+}

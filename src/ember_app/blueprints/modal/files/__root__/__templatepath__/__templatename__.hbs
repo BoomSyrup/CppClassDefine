@@ -1,0 +1,17 @@
+{{#modal-basic close=(action 'close')}}
+<div class='box'>
+    <section class="title">
+        <h1 class="has-text-centered">Title</h1>
+    </section>
+    <section class="form">
+        {{!-- Put your main content here --}}
+    </section>
+    <section class="bottom">
+        <div class="control">
+            <a class="button is-primary" disabled={{disabled}} onclick={{action 'okClicked'}}>
+                <span>OK</span>
+            </a>
+        </div>
+    </section>
+</div>
+{{/modal-basic}}
