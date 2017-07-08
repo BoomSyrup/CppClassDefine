@@ -1,3 +1,4 @@
 <p class="control">
-  <textarea placeholder={{codePlaceholder}} value=""></textarea>
+  <textarea onkeyup = {{ action "textChanged" }}
+            placeholder={{codePlaceholder}} value=""></textarea>
 </p>

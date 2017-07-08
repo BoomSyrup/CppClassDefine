@@ -4,4 +4,11 @@ const {Component} = Ember;
 
 export default Component.extend({
   codePlaceholder: config.classStruct,
+
+  actions: {
+    textChanged(event) {
+      let text = event.target.value;
+      this.sendAction('action', text);
+    }
+  }
 });
