@@ -3,9 +3,41 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
-    emberCodeHighlight: {
-      style: 'solarized-light'
-    }
+    codemirror: {
+      modes: ['clike'],
+      themes: [
+        '3024-day',
+        '3024-night',
+        'ambiance',
+        'ambiance-mobile',
+        'base16-dark',
+        'base16-light',
+        'blackboard',
+        'cobalt',
+        'eclipse',
+        'elegant',
+        'erlang-dark',
+        'lesser-dark',
+        'mbo',
+        'mdn-like',
+        'midnight',
+        'monokai',
+        'neat',
+        'neo',
+        'night',
+        'paraiso-dark',
+        'paraiso-light',
+        'pastel-on-dark',
+        'rubyblue',
+        'solarized',
+        'the-matrix',
+        'tomorrow-night-eighties',
+        'twilight',
+        'vibrant-ink',
+        'xq-dark',
+        'xq-light'
+        ]
+      }
   });
 
   // Use `app.import` to add additional libraries to the generated

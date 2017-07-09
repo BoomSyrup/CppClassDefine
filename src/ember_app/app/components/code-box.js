@@ -6,9 +6,10 @@ export default Component.extend({
   codePlaceholder: config.classStruct,
 
   actions: {
-    textChanged(event) {
-      let text = event.target.value;
-      this.sendAction('action', text);
+    valueUpdated(myCode) {
+      if (!!myCode) {
+        this.sendAction('action', myCode);
+      }
     }
   }
 });
