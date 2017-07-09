@@ -5,7 +5,17 @@ export default Ember.Route.extend({
 
   actions: {
     sumbitCode() {
-      alert(this.get('code'));
+      var codeText = this.get('code');
+      codeText = codeText.replace(/\s\s+/g, " ");
+      var codeArray = codeText.split(" ");
+      codeArray.forEach(function(element)
+      {
+        console.log(element);
+      });
+      var classIndex = codeArray.indexOf("class");
+      var className = codeArray[classIndex + 1];
+      className = className.replace(/[^0-9a-z]/gi, '');
+      alert(className);
     },
 
     updateCode(code) {
