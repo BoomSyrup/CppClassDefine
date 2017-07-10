@@ -10,10 +10,12 @@ export default Component.extend({
 
   codePlaceholder: config.classStruct,
   theme: null,
+  myCode: null,
 
   actions: {
     valueUpdated(myCode) {
       if (!!myCode) {
+        this.set('myCode', myCode);
         this.sendAction('action', myCode);
       }
     }
