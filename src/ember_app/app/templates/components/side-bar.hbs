@@ -1,11 +1,29 @@
 <nav class="nav has-shadow"></nav>
-<div class="tile is-parent">
-  <div class="tile is-child box">
-    <p class="title">C++ Class Generator</p>
-    <p>
-      Paste in your header file code to generate functions for all your classes.
+<div class="tile is-parent" tag="">
+  <article class="message">
+    <div class="message-header">
+      <p>C++ Class Generator</p>
+      <button class="delete"></button>
+    </div>
+    <div class="message-body">
+      Paste or type in your header file code to generate functions for all your classes.
       This web app maintains ordering for public/private and works for almost all
       cases that you might type in.
-    </p>
+    </div>
+  </article>
+</div>
+
+<div class="tile is-parent">
+  <div class="tile is-child box">
+    <div class="columns">
+      <div class="column">
+        <label class="label">Theme:</label>
+      </div>
+      <div class="column">
+        {{#power-select selected=currentTheme options=themes onchange=(action "themeChanged") as |theme|}}
+          {{theme}}
+        {{/power-select}}
+      </div>
+    </div>
   </div>
 </div>

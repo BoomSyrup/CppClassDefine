@@ -3,6 +3,9 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
+    sassOptions: {
+      includePaths: ['node_modules/ember-power-select/app/styles']
+    },
     codemirror: {
       addonFiles: ['wrap/hardwrap.js'],
       modes: ['clike'],
