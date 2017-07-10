@@ -1,2 +1,10 @@
 @import "bulma";
 @import "pod-styles";
+
+html, body {
+  margin: 0px;
+}
+
+html {
+  background: black;
+}
