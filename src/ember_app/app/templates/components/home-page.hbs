@@ -1,9 +1,9 @@
 <div class="columns is-gapless">
   <div class="column is-one-third side-bar">
-    {{side-bar}}
+    {{side-bar action="updateTheme" defaultTheme=defaultTheme}}
   </div>
   <div class="column code-box">
     {{submit-button action="sumbitCode"}}
-    {{code-box action="updateCode" text=code}}
+    {{code-box action="updateCode" text=code theme=theme}}
   </div>
 </div>
