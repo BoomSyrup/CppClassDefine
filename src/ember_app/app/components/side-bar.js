@@ -1,7 +1,9 @@
 import Ember from 'ember';
+import config from '../config/environment';
+const { Component } = Ember;
 
-export default Ember.Component.extend({
-  themes: ['paraiso-dark','paraiso-light', 'monokai'],
+export default Component.extend({
+  themes: config.themes,
   currentTheme: 'paraiso-dark',
 
   actions: {

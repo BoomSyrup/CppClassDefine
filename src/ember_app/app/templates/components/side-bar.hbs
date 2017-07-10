@@ -20,7 +20,10 @@
         <label class="label">Theme:</label>
       </div>
       <div class="column">
-        {{#power-select selected=currentTheme options=themes onchange=(action "themeChanged") as |theme|}}
+        {{#power-select selected=currentTheme
+                        options=themes
+                        onchange=(action "themeChanged")
+                        searchEnabled=false as |theme|}}
           {{theme}}
         {{/power-select}}
       </div>

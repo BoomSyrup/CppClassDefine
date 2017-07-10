@@ -33,6 +33,30 @@ module.exports = function(environment) {
                            string name;\n
                            int age;\n
                        };`
+    ENV.themes =
+            [
+            'ambiance',
+            'blackboard',
+            'cobalt',
+            'eclipse',
+            'erlang-dark',
+            'lesser-dark',
+            'mbo',
+            'mdn-like',
+            'monokai',
+            'neat',
+            'neo',
+            'night',
+            'paraiso-dark',
+            'paraiso-light',
+            'pastel-on-dark',
+            'rubyblue',
+            'solarized',
+            'tomorrow-night-eighties',
+            'twilight',
+            'xq-dark',
+            'xq-light'
+            ]
   }
 
   if (environment === 'test') {
