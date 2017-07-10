@@ -4,6 +4,7 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     codemirror: {
+      addonFiles: ['wrap/hardwrap.js'],
       modes: ['clike'],
       themes: [
         '3024-day',
