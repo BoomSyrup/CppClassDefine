@@ -14,7 +14,7 @@ export default Ember.Route.extend({
       });
       var classIndex = codeArray.indexOf("class");
       var className = codeArray[classIndex + 1];
-      className = className.replace(/[^0-9a-z]/gi, '');
+      className = className.replace(/[^0-9a-z_-]/gi, '');
       alert(className);
     },
 
