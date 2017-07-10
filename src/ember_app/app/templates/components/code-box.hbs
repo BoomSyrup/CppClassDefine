@@ -1,12 +1,13 @@
-<section class="hero is-fullheight">
-  <div class="hero-body">
+<section class="hero is-fullheight noScroll">
+  <div class="hero-head">
     <div class="container is-fluid code-box">
   {{ivy-codemirror value=myCode valueUpdated=(action "valueUpdated")
                    options=(hash theme="monokai"
                                  mode="clike"
                                  lineNumbers=true
                                  tabSize=2
-                                 autofocus=true)}}
+                                 autofocus=true
+                                 scrollbarStyle=null)}}
     </div>
   </div>
 </section>
