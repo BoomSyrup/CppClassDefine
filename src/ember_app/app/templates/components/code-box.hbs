@@ -1,6 +1,4 @@
 <section class="hero is-fullheight noScroll">
-  <div class="hero-head">
-    <div class="container is-fluid code-box">
   {{ivy-codemirror value=myCode valueUpdated=(action "valueUpdated")
                    options=(hash theme=theme
                                  mode="clike"
@@ -8,6 +6,4 @@
                                  lineNumbers=true
                                  autofocus=true
                                  scrollbarStyle=null)}}
-    </div>
-  </div>
 </section>

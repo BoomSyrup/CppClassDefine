@@ -4,12 +4,11 @@ const {Component} = Ember;
 export default Component.extend({
   init() {
     this._super();
-    this.set('theme', this.get('defaultTheme'));
+    this.set('theme', 'paraiso-dark');
   },
 
   code: null,
   theme: null,
-  defaultTheme: 'paraiso-dark',
 
   actions: {
     sumbitCode() {
