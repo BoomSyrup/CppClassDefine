@@ -1,4 +1,4 @@
-Build command:
+Heroku site:
 ```
-ember build --environment=production --output-path=../public/
+https://cpp-class-generator.herokuapp.com/
 ```

@@ -1,0 +1,9 @@
+<section class="hero is-fullheight noScroll">
+  {{ivy-codemirror value=myCode valueUpdated=(action "valueUpdated")
+                   options=(hash theme=theme
+                                 mode="clike"
+                                 tabSize=2
+                                 lineNumbers=true
+                                 autofocus=true
+                                 scrollbarStyle=null)}}
+</section>
