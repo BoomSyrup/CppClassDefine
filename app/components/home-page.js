@@ -12,48 +12,48 @@ export default Component.extend({
 
   actions: {
     sumbitCode() {
-      var exceptionDictionary =
-      {
-        const: "const",
-        friend: "friend",
-        static: "static"
-      };
-      var classDictionary = {};
-      var toParseArray = [];
+      var classDictionary = [];
       var codeText = this.get('code');
 
       var regexFunction = /([a-z_]\w*)\s([a-z_]\w*.*?);/gi;
       //var regexClassforName = /class\s*([a-z_]\w*)/gi;
       var regexClassTotal = /class\s*([a-z_]\w*)\s*{([\s\S]*?)};/gim;
 
+      var toParseArray = [];
       toParseArray = classIntoClassArray(codeText);
       //breaks down each class into their functions
 
       toParseArray.forEach(function(classElement){
         console.log(classElement[2]);
-        var functionDictionary = {};
-        var execFunction = regexFunction.exec(classElement[2]);
-
+        //classFunctions is an object to put into classDictionary
+        var classFunctions = {className:"", functions: []};
+        //functionArray holds functionObj's and this functon will go to classFucntions
+        var functionArray = [];
         //parsing each function
+        var execFunction = regexFunction.exec(classElement[2]);
         while(execFunction!=null)
         {
           var functionObj =
-          {name:"",
+          {
+           name:"",
            datatype:"",
-           const: false,
-           static: false,
           };
           //parsing function for datatype and name
-          var  expression = parseForDataAndName(execFunction);
           console.log(expression)
           console.log(expression[2]);
           console.log(expression[1]);
           functionObj.name = expression[2];
           functionObj.datatype = expression[1];
           console.log(functionObj);
+          //pushes functions into function array
+          functionArray.push(functionObj);
           execFunction = regexFunction.exec(classElement[2]);
         }
+        //puts all the functions under a class in classFucntions
+        classFunctions.push({className: classElement[1], functions: functionArray});
+        classDictionary.push(classFunctions);
       });
+
 
       function classIntoClassArray(codeText)
       {
@@ -65,16 +65,6 @@ export default Component.extend({
         }
         return toParseArray;
       }
-
-      function parseForDataAndName(textToParse)
-      {
-        while(textToParse != null && (textToParse[1] in exceptionDictionary))
-        {
-          textToParse = regexFunction.exec(textToParse[2]);
-        }
-        return textToParse;
-      }
-    },
 
     updateCode(code) {
       this.set('code', code);
