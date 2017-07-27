@@ -15,7 +15,7 @@ export default Component.extend({
       var classDictionary = [];
       var codeText = this.get('code');
 
-      var regexFunction = /([a-z_]\w*)\s([a-z_]\w*.*?);/gi;
+      var regexFunction = /([a-z_]\w*)\s([a-z_]\w*.*?[(][a-z_]*\w*.*?[)]);/gi;
       //var regexClassforName = /class\s*([a-z_]\w*)/gi;
       var regexClassTotal = /class\s*([a-z_]\w*)\s*{([\s\S]*?)};/gim;
 
@@ -58,11 +58,13 @@ export default Component.extend({
 
       classDictionary.forEach(function(classElement){
         var className = classElement.className;
+        var printString = "";
         classElement.functions.forEach(function(functionObj)
         {
-          var functionString = functionObj.datatype + " " + className + "::"+ functionObj.name + "{\n\n}"
-          console.log(functionString);
-        })
+          var functionString = functionObj.datatype + " " + className + "::"+ functionObj.name + "{\n\n}" + "\n\n\n"
+          printString += functionString;
+        });
+        console.log(printString);
       });
 
       function classIntoClassArray(codeText)
