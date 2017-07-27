@@ -34,7 +34,7 @@ export default Component.extend({
           var functionObj =
           {
            name:"",
-           datatype:"",
+           datatype:""
           };
           //parsing function for datatype and name
           // console.log(execFunction)
@@ -48,13 +48,21 @@ export default Component.extend({
           execFunction = regexFunction.exec(classElement[2]);
         }
         //puts all the functions under a class in classFucntions
-        classDictionary.push({className: classElement[1], functions: functionArray});
+        var classObj = {
+          className: classElement[1],
+          functions: functionArray
+        };
+        classDictionary.push(classObj);
         // console.log(classDictionary);
       });
 
       classDictionary.forEach(function(classElement){
-        console.log(classElement.className);
-        console.log(classElement.functions);
+        var className = classElement.className;
+        classElement.functions.forEach(function(functionObj)
+        {
+          var functionString = functionObj.datatype + " " + className + "::"+ functionObj.name + "{\n\n}"
+          console.log(functionString);
+        })
       });
 
       function classIntoClassArray(codeText)
