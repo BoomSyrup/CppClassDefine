@@ -26,7 +26,7 @@ export default Component.extend({
       toParseArray.forEach(function(classElement){
         console.log(classElement[2]);
         //classFunctions is an object to put into classDictionary
-        var classFunctions = {className:"", functions: []};
+        var classFunctions = {};
         //functionArray holds functionObj's and this functon will go to classFucntions
         var functionArray = [];
         //parsing each function
@@ -39,21 +39,22 @@ export default Component.extend({
            datatype:"",
           };
           //parsing function for datatype and name
-          console.log(expression)
-          console.log(expression[2]);
-          console.log(expression[1]);
-          functionObj.name = expression[2];
-          functionObj.datatype = expression[1];
+          console.log(execFunction)
+          console.log(execFunction[2]);
+          console.log(execFunction[1]);
+          functionObj.name = execFunction[2];
+          functionObj.datatype = execFunction[1];
           console.log(functionObj);
           //pushes functions into function array
           functionArray.push(functionObj);
           execFunction = regexFunction.exec(classElement[2]);
         }
         //puts all the functions under a class in classFucntions
-        classFunctions.push({className: classElement[1], functions: functionArray});
+        classFunctions[classElement[1]] = functionArray;
+        console.log(classFunctions);
         classDictionary.push(classFunctions);
+        console.log(classDictionary);
       });
-
 
       function classIntoClassArray(codeText)
       {
@@ -64,7 +65,8 @@ export default Component.extend({
           execClass = regexClassTotal.exec(codeText);
         }
         return toParseArray;
-      }
+      };
+    },
 
     updateCode(code) {
       this.set('code', code);
